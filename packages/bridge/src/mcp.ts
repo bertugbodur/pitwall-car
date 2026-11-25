@@ -36,7 +36,7 @@ async function explain(code: string, lang: 'tr' | 'en') {
 }
 
 export function createMcpServer({ adapter, dataDir, showVin = false }: McpOptions) {
-  const server = new McpServer({ name: 'pitwall', version: '0.1.0' });
+  const server = new McpServer({ name: 'pitwall-car', version: '0.1.0' });
   let client: ElmClient | undefined;
   let connecting: Promise<ElmClient> | undefined;
 

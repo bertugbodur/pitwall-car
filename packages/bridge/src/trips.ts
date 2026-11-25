@@ -15,7 +15,7 @@ export interface TripSummary {
   maxCoolantC: number;
 }
 
-export const defaultDataDir = (): string => join(homedir(), '.pitwall');
+export const defaultDataDir = (): string => join(homedir(), '.pitwall-car');
 
 const FIELDS = ['startedAt', 'endedAt', 'distanceKm', 'avgSpeed', 'fuelL', 'avgConsumption', 'idleSec', 'maxCoolantC'] as const;
 const KEEP = 50;

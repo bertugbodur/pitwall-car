@@ -199,8 +199,8 @@ function Charts() {
         </Button>
         {!recording && count > 0 && (
           <>
-            <Button onClick={() => download('pitwall.csv', 'text/csv', csv())}>{t('csv')}</Button>
-            <Button onClick={() => download('pitwall.json', 'application/json', JSON.stringify(recordedRows()))}>{t('json')}</Button>
+            <Button onClick={() => download('pitwall-car.csv', 'text/csv', csv())}>{t('csv')}</Button>
+            <Button onClick={() => download('pitwall-car.json', 'application/json', JSON.stringify(recordedRows()))}>{t('json')}</Button>
           </>
         )}
       </div>

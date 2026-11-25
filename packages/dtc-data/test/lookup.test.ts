@@ -32,3 +32,10 @@ describe('offline code descriptions', () => {
     expect((await searchDtc('ateşleme', 'tr')).map((r) => r.code)).toContain('P0301');
   });
 });
+
+describe('embedded English text', () => {
+  test('descriptions are intact sentences', async () => {
+    expect((await describeDtc('P0301')).en?.description).toMatch(/misfires? .*crankshaft speed/i);
+    expect((await describeDtc('P0420')).en?.description).toMatch(/sensor/i);
+  });
+});

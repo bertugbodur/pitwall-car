@@ -1,6 +1,6 @@
 import type { RawChannel } from '@pitwall/obd-core';
 
-/** Talks to the local bridge (`npx pitwall-obd bridge`), used for Wi-Fi adapters. */
+/** Talks to the local bridge (`npx pitwall-car bridge`), used for Wi-Fi adapters. */
 
 export const DEFAULT_BRIDGE_PORT = 35100;
 

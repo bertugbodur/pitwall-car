@@ -1,7 +1,7 @@
 {
-  "name": "pitwall-obd",
+  "name": "pitwall-car",
   "version": "0.1.0",
-  "description": "Read-only local bridge and MCP server for ELM327 OBD-II adapters (part of pitwall)",
+  "description": "Read-only local bridge and MCP server for ELM327 OBD-II adapters (part of pitwall car)",
   "license": "MIT",
   "author": "Bertuğ Bodur (est)",
   "type": "module",
@@ -9,8 +9,7 @@
     "node": ">=22.12"
   },
   "bin": {
-    "pitwall-obd": "dist/cli.js",
-    "pitwall": "dist/cli.js"
+    "pitwall-car": "dist/cli.js"
   },
   "files": [
     "dist"

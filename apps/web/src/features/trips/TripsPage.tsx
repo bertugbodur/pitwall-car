@@ -116,7 +116,7 @@ export function TripsPage() {
         subtitle={t('subtitle')}
         action={
           trips && trips.length > 0 ? (
-            <Button onClick={() => download('pitwall-trips.json', 'application/json', JSON.stringify(trips))}>{t('export')}</Button>
+            <Button onClick={() => download('pitwall-car-trips.json', 'application/json', JSON.stringify(trips))}>{t('export')}</Button>
           ) : undefined
         }
       />

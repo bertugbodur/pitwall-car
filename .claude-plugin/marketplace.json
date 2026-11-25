@@ -1,7 +1,7 @@
 {
-  "name": "pitwall",
+  "name": "pitwall-car",
   "owner": { "name": "Bertuğ Bodur (est)" },
   "plugins": [
-    { "name": "pitwall", "source": "./", "description": "Read your car's OBD-II data and explain faults. Read-only." }
+    { "name": "pitwall-car", "source": "./", "description": "Read your car's OBD-II data and explain faults. Read-only." }
   ]
 }

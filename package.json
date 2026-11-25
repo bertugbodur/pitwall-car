@@ -1,5 +1,5 @@
 {
-  "name": "pitwall",
+  "name": "pitwall-car-monorepo",
   "version": "0.1.0",
   "private": true,
   "description": "Read-only OBD-II dashboard, fault explainer and trip planner",
@@ -15,12 +15,13 @@
     "test:watch": "vitest",
     "typecheck": "pnpm -r typecheck",
     "dev": "pnpm --filter @pitwall/web dev",
-    "build": "pnpm --filter @pitwall/web build && pnpm --filter pitwall-obd build",
+    "build": "pnpm --filter @pitwall/web build && pnpm --filter pitwall-car build",
     "test:e2e": "playwright test"
   },
   "devDependencies": {
     "@playwright/test": "^1.65.1",
     "@types/node": "^26.6.6",
+    "marked": "^18.3.0",
     "typescript": "^7.0.2",
     "vitest": "^5.1.1"
   }

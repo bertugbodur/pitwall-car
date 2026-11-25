@@ -4,7 +4,7 @@ import { chromium } from '@playwright/test';
 import { execFileSync } from 'node:child_process';
 import { mkdir, rm } from 'node:fs/promises';
 
-const BASE = 'http://localhost:4173/pitwall/#/';
+const BASE = 'http://localhost:4173/pitwall-car/#/';
 const FPS = 8;
 const frames = process.argv[2] ?? 'frames';
 await rm(frames, { recursive: true, force: true });

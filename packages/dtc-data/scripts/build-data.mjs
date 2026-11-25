@@ -28,7 +28,7 @@ for (const name of FILES) {
     // [title, description, causes, symptoms]; causes are ordered most likely first by OBDex.
     out[r.code] = [
       r.title.en,
-      shorten((r.description?.en ?? '').replace(/s+/g, ' ').trim()),
+      shorten((r.description?.en ?? '').replace(/\s+/g, ' ').trim()),
       (r.common_causes ?? []).map((c) => c.label?.en).filter(Boolean),
       (r.symptoms ?? []).map((s) => s.en).filter(Boolean),
     ];

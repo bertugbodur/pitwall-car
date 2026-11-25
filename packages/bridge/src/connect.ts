@@ -56,7 +56,7 @@ export async function configureClient(
   // VS Code names the list "servers" and wants the transport type.
   const key = client === 'vscode' ? 'servers' : 'mcpServers';
   const entry = client === 'vscode' ? { type: 'stdio', ...server } : server;
-  config[key] = { ...config[key], pitwall: entry };
+  config[key] = { ...config[key], 'pitwall-car': entry };
   const content = `${JSON.stringify(config, null, 2)}\n`;
 
   if (!options.dryRun) {

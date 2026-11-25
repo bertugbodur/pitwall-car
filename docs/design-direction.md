@@ -1,8 +1,8 @@
 # Tasarım yönü ve proje kararları
 
 ## Adlar
-- Depo ve uygulama adı: `pitwall`
-- npm paketi: `pitwall-obd` (`pitwall` npm'de başkasına ait). Komut: `npx pitwall-obd bridge`.
+- Depo adı: `pitwall-car`, ekranda "pitwall car"
+- npm paketi: `pitwall-car`. Komut: `npx pitwall-car bridge`. İç paketler `@pitwall/*` olarak kaldı.
 
 ## Görsel dil (referans: açık temalı "bento" panel)
 - Uygulama ekranları ve gündüz teması: bento düzeninde kartlar, bol boşluk, yumuşak köşeler, nötr zemin, tek vurgu rengi yeşil.

@@ -28,7 +28,7 @@ const withAdapter = (command: Command) =>
     .option('--simulator [scenario]', 'simulated car (default city)');
 
 const program = new Command()
-  .name('pitwall-obd')
+  .name('pitwall-car')
   .description('Read-only local bridge and MCP server for ELM327 OBD-II adapters.')
   .version('0.1.0');
 
@@ -86,7 +86,7 @@ withAdapter(program.command('connect').description('add the MCP server to an AI 
     const self = fileURLToPath(import.meta.url);
     const installed = /[\\/]node_modules[\\/]/.test(self);
     const server = installed
-      ? { command: 'npx', args: ['-y', 'pitwall-obd', 'mcp', ...adapterArgs] }
+      ? { command: 'npx', args: ['-y', 'pitwall-car', 'mcp', ...adapterArgs] }
       : { command: process.execPath, args: [self, 'mcp', ...adapterArgs] };
 
     const result = await configureClient(client as ClientName, server, { dryRun: flags.dryRun });

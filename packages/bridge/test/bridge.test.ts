@@ -197,7 +197,7 @@ describe('MCP server', () => {
 });
 
 describe('connect command', () => {
-  const server = { command: 'npx', args: ['-y', 'pitwall-obd', 'mcp', '--simulator', 'city'] };
+  const server = { command: 'npx', args: ['-y', 'pitwall-car', 'mcp', '--simulator', 'city'] };
 
   test.each([
     ['claude-desktop', 'mcpServers'],
@@ -211,7 +211,7 @@ describe('connect command', () => {
     const written = JSON.parse(await readFile(result.path, 'utf8'));
     expect(written.keep).toBe(true);
     expect(written[key].other).toEqual({ command: 'x' });
-    expect(written[key].pitwall).toMatchObject(server);
+    expect(written[key]['pitwall-car']).toMatchObject(server);
     expect(await readFile(`${path}.bak`, 'utf8')).toContain('other');
   });
 

@@ -5,7 +5,7 @@ pnpm install
 pnpm test          # unit tests
 pnpm typecheck
 pnpm test:e2e      # needs a browser: pnpm exec playwright install chromium (or set PW_CHANNEL=msedge)
-pnpm dev           # http://localhost:5173/pitwall/
+pnpm dev           # http://localhost:5173/pitwall-car/
 ```
 
 ## The one rule that is not negotiable

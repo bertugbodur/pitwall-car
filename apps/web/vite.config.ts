@@ -3,9 +3,9 @@ import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
 
-// GitHub Pages serves the project at /pitwall/.
+// GitHub Pages serves the project at /pitwall-car/.
 export default defineConfig({
-  base: '/pitwall/',
+  base: '/pitwall-car/',
   plugins: [
     react(),
     tailwindcss(),
@@ -13,8 +13,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['icon.svg'],
       manifest: {
-        name: 'pitwall',
-        short_name: 'pitwall',
+        name: 'pitwall car',
+        short_name: 'pitwall car',
         description: 'Salt okunur OBD-II gösterge paneli, arıza açıklayıcı ve yolculuk planlayıcı.',
         lang: 'tr',
         display: 'standalone',

@@ -41,7 +41,7 @@ const useStrings = defineStrings(
     unsupported: 'Yok',
     lookup: 'Kod veya belirti ara',
     lookupHint: 'Örn. P0420 ya da “ateşleme”',
-    noClear: 'pitwall arıza kodlarını silmez: silmek sorunu çözmeden gizler ve hazırlık durumunu sıfırlar.',
+    noClear: 'pitwall car arıza kodlarını silmez: silmek sorunu çözmeden gizler ve hazırlık durumunu sıfırlar.',
   },
   {
     title: 'Trouble codes',
@@ -69,7 +69,7 @@ const useStrings = defineStrings(
     unsupported: 'n/a',
     lookup: 'Look up a code or symptom',
     lookupHint: 'e.g. P0420 or “misfire”',
-    noClear: 'pitwall does not clear codes: clearing hides the problem without fixing it and resets readiness.',
+    noClear: 'pitwall car does not clear codes: clearing hides the problem without fixing it and resets readiness.',
   },
 );
 

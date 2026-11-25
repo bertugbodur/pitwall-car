@@ -1,4 +1,10 @@
-# pitwall
+<p align="center">
+  <img src="docs/media/car.gif" alt="pitwall car: yolda giden yeşil araba" width="800">
+</p>
+
+<img src="docs/media/sticker.png" alt="pitwall car çıkartması" width="120" align="right">
+
+# 🚗 pitwall car
 
 **Salt okunur** OBD-II gösterge paneli, arıza açıklayıcı ve yolculuk planlayıcı. Ücretsiz, açık kaynak, sunucusuz bir web uygulaması.
 
@@ -6,9 +12,18 @@
 
 ![Gece temalı gösterge modu, yeni bir arıza uyarısı ve açıklaması (simülatör)](docs/media/demo.gif)
 
-## 60 saniyede dene
+## 📘 Kullanım kılavuzu · User guide
 
-1. <https://bertugbodur.github.io/pitwall> adresini Chrome veya Edge'de aç.
+| | PDF | GitHub |
+|---|---|---|
+| 🇹🇷 Türkçe | [Kullanım kılavuzu (PDF)](docs/guide/pitwall-car-kullanim-kilavuzu-tr.pdf) | [Oku](docs/guide/kullanim-kilavuzu.md) |
+| 🇬🇧 English | [User guide (PDF)](docs/guide/pitwall-car-user-guide-en.pdf) | [Read](docs/guide/user-guide.md) |
+
+Klasör: [docs/guide](docs/guide/)
+
+## ⏱️ 60 saniyede dene
+
+1. <https://bertugbodur.github.io/pitwall-car> adresini Chrome veya Edge'de aç.
 2. **Simülatörle dene**'ye bas. Araç da adaptör de gerekmez.
 3. Senaryo seç (ör. "1. silindir ateşleme arızası"), **Arızalar** ve **Gösterge** sayfalarına bak.
 
@@ -19,7 +34,7 @@ pnpm install
 pnpm dev
 ```
 
-## Gerçek araçla
+## 🔌 Gerçek araçla
 
 1. ELM327 adaptörünü OBD-II soketine tak, kontağı aç.
 2. Bağlantı türünü seç: USB / Bluetooth (seri), Bluetooth LE ya da Wi-Fi (yerel köprü).
@@ -32,11 +47,11 @@ pnpm dev
 | USB | Web Serial | Masaüstü Chrome/Edge |
 | Bluetooth Classic (SPP) | Web Serial | Masaüstü Chrome/Edge 117+, Android Chrome 138+ |
 | Bluetooth LE | Web Bluetooth | Android, Windows, macOS, ChromeOS |
-| Wi-Fi | `npx pitwall-obd bridge` | Bilgisayar |
+| Wi-Fi | `npx pitwall-car bridge` | Bilgisayar |
 
 iPhone/iPad'de ve Safari'de adaptöre bağlanılamaz. Ayrıntı ve adaptör seçme ipuçları: [docs/connection.md](docs/connection.md).
 
-## Neler var
+## 🧰 Neler var
 
 - **Canlı panel:** göstergeler, desteklenen tüm sensörler, grafik ve CSV/JSON kaydı, anlık ve ortalama [tüketim tahmini](docs/consumption.md), VIN ve araç bilgisi.
 - **Arıza açıklayıcı:** kayıtlı, bekleyen ve kalıcı kodlar, freeze frame, muayene hazırlık durumu. Çevrimdışı İngilizce açıklamalar (OBDex) ve 584 kod için Türkçe metin. İsteğe bağlı yapay zekâ açıklaması.
@@ -48,7 +63,7 @@ iPhone/iPad'de ve Safari'de adaptöre bağlanılamaz. Ayrıntı ve adaptör seç
 |---|---|---|
 | ![Ana sayfa](docs/media/home.png) | ![Arızalar](docs/media/codes.png) | ![Gösterge](docs/media/cockpit.png) |
 
-## Güvenlik
+## 🛡️ Güvenlik
 
 - **Araca hiçbir şey yazılmaz.** Yalnızca OBD okuma servisleri (01, 02, 03, 07, 09, 0A) ve sayılı `AT` komutları gönderilir; bu bir izin listesiyle kodda zorlanır ve testlerle korunur.
 - **Neden arıza silme yok?** Silmek sorunu çözmeden gizler, arıza anındaki kayıtları yok eder ve muayene hazırlık durumunu sıfırlar.
@@ -57,12 +72,12 @@ iPhone/iPad'de ve Safari'de adaptöre bağlanılamaz. Ayrıntı ve adaptör seç
 
 Ayrıntı: [docs/security.md](docs/security.md).
 
-## Gizlilik
+## 🔒 Gizlilik
 
 | Veri | Nerede | Dışarı gider mi |
 |---|---|---|
 | Canlı veri, arızalar | Bellekte | Hayır |
-| Yolculuklar | Bu cihazda (IndexedDB) | Hayır. Köprü kullanırsan **konumsuz** özetler kendi bilgisayarındaki `~/.pitwall` klasörüne yazılır |
+| Yolculuklar | Bu cihazda (IndexedDB) | Hayır. Köprü kullanırsan **konumsuz** özetler kendi bilgisayarındaki `~/.pitwall-car` klasörüne yazılır |
 | Konum | Varsayılan **kapalı** | Hayır |
 | VIN | Bellekte | Hiçbir zaman otomatik gönderilmez; MCP'de varsayılan maskelidir |
 | Yapay zekâya gidenler | — | Yalnızca sen **Gönder** dersen; gidecek metin önce ekranda gösterilir |
@@ -98,7 +113,7 @@ Standart OBD-II elektrikli araçların şarj yüzdesini vermez (üreticiye özel
 Claude Desktop, Claude Code, Cursor veya VS Code arabanın verisini (yalnızca okuyarak) görebilir:
 
 ```bash
-npx pitwall-obd connect claude-code --serial COM5
+npx pitwall-car connect claude-code --serial COM5
 ```
 
 Araba yoksa `--simulator misfire`, Wi-Fi adaptör için `--tcp`. Araçlar: `get_vehicle_info`, `get_live_data`, `read_dtcs`, `get_freeze_frame`, `get_readiness`, `explain_dtc`, `get_trip_summary`. VIN'i açmak için `mcp --show-vin`. Aynı seri portu köprü ve MCP aynı anda kullanamaz.
@@ -106,13 +121,13 @@ Araba yoksa `--simulator misfire`, Wi-Fi adaptör için `--tcp`. Araçlar: `get_
 Claude Code eklentisi (skill + MCP) olarak:
 
 ```bash
-claude plugin marketplace add bertugbodur/pitwall
-claude plugin install pitwall@pitwall
+claude plugin marketplace add bertugbodur/pitwall-car
+claude plugin install pitwall-car@pitwall-car
 ```
 
-> `pitwall-obd` paketi henüz npm'de yayımlanmadı (`pitwall` adı başkasına ait). Yayımlanana kadar kaynaktan: `pnpm --filter pitwall-obd build`, sonra `node packages/bridge/dist/cli.js connect claude-code --simulator misfire`.
+> `pitwall-car` paketi henüz npm'de yayımlanmadı (npm'deki `pitwall` adı başkasına ait). Yayımlanana kadar kaynaktan: `pnpm --filter pitwall-car build`, sonra `node packages/bridge/dist/cli.js connect claude-code --simulator misfire`.
 
-## Geliştirme
+## 🛠️ Geliştirme
 
 ```
 apps/web              PWA (React, Vite, Tailwind)
@@ -121,7 +136,7 @@ packages/transports   Web Serial, Web Bluetooth, köprü, simülatör
 packages/dtc-data     OBDex + Türkçe açıklamalar
 packages/ev-data      OpenEV Data
 packages/ai           Yapay zekâ sağlayıcıları ve istem
-packages/bridge       npx pitwall-obd bridge | mcp | connect
+packages/bridge       npx pitwall-car bridge | mcp | connect
 ```
 
 Testler ve kurallar: [CONTRIBUTING.md](CONTRIBUTING.md).
@@ -139,3 +154,5 @@ pitwall reads your car through an ELM327 adapter in Chrome or Edge: live gauges,
 It **never writes to the car**: there is no code clearing, and every command passes a read-only allowlist. Explanations are information, not a diagnosis. Tested only against its own emulator so far; reports from real adapters are welcome.
 
 The interface is available in Turkish and English (Settings).
+
+Step by step: [User guide (PDF)](docs/guide/pitwall-car-user-guide-en.pdf) · [read on GitHub](docs/guide/user-guide.md).

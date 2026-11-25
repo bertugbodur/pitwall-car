@@ -1,11 +1,11 @@
 ---
-name: pitwall
-description: Read a car's OBD-II data through the pitwall MCP server and explain it in plain language. Use when the user asks about their car, a check engine light, trouble codes, inspection readiness, live sensor values or recent trips.
+name: pitwall-car
+description: Read a car's OBD-II data through the pitwall-car MCP server and explain it in plain language. Use when the user asks about their car, a check engine light, trouble codes, inspection readiness, live sensor values or recent trips.
 ---
 
-# Reading a car with pitwall
+# Reading a car with pitwall car
 
-The pitwall MCP server is read-only. It cannot clear codes or change anything in the car.
+The pitwall-car MCP server is read-only. It cannot clear codes or change anything in the car.
 
 ## Order of work
 
