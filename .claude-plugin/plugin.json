@@ -1,0 +1,14 @@
+{
+  "name": "pitwall",
+  "version": "0.1.0",
+  "description": "Read your car's OBD-II data and explain faults. Read-only.",
+  "author": { "name": "Bertuğ Bodur (est)" },
+  "license": "MIT",
+  "mcpServers": {
+    "pitwall": {
+      "command": "npx",
+      "args": ["-y", "pitwall-obd", "mcp"],
+      "env": { "PITWALL_ADAPTER": "${PITWALL_ADAPTER:-}" }
+    }
+  }
+}

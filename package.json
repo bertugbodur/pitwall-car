@@ -1,0 +1,27 @@
+{
+  "name": "pitwall",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Read-only OBD-II dashboard, fault explainer and trip planner",
+  "license": "MIT",
+  "author": "Bertuğ Bodur (est)",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "packageManager": "pnpm@12.21.0",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "pnpm -r typecheck",
+    "dev": "pnpm --filter @pitwall/web dev",
+    "build": "pnpm --filter @pitwall/web build && pnpm --filter pitwall-obd build",
+    "test:e2e": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.1"
+  }
+}

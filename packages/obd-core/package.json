@@ -1,0 +1,12 @@
+{
+  "name": "@pitwall/obd-core",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./emulator": "./src/emulator/index.ts"
+  },
+  "scripts": { "typecheck": "tsc -p tsconfig.json" }
+}

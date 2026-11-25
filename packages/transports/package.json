@@ -1,0 +1,11 @@
+{
+  "name": "@pitwall/transports",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "exports": { ".": "./src/index.ts" },
+  "scripts": { "typecheck": "tsc -p tsconfig.json" },
+  "dependencies": { "@pitwall/obd-core": "workspace:*" },
+  "devDependencies": { "@types/w3c-web-serial": "^1.0.8", "@types/web-bluetooth": "^0.0.21" }
+}
